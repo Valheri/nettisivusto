@@ -1,0 +1,142 @@
+/* Fontin tuonti kansiosta. */
+@font-face {
+  font-family: 'cascadiaCodeFontti';
+  src: url('fontti/CascadiaCode.ttf') format('truetype');
+}
+/* Fontin ja tausta värin asetus.*/
+body {
+  margin: 0;
+  font-family: 'cascadiaCodeFontti';
+  background-color: #E8F3F9;
+  
+}
+/* Navigointipalkin asetuksia*/
+.navigation-bar{
+  overflow: hidden;
+  background-color: #9DFE98;
+  position: relative;
+  
+}
+/* navigointipalkin a elementtien asetukset. */
+.navigation-bar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 32px;
+  margin: 4px 2px;
+    
+}
+/* navigointipalkin a elementtien hiireen reaktiot. */
+.navigation-bar a:hover {
+  background-color: #A6F4BE;
+  color: whitesmoke;
+}
+.navigation-bar a.active {
+  background-color: #A6F4BE;
+  color: whitesmoke;
+}
+.kuvapidike {
+
+  display: inline-flexbox;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+
+/* Näytön ollessa max 600px leveä valikon levennys ja asioiden keskittäminen*/
+@media screen and (max-width: 600px) {
+  .navigation-bar a {
+    padding: 0%;
+    width: 100%;
+    
+  }
+
+  .navigation-bar ul {
+    padding-right: 10%;
+  }
+
+  .logo{
+    margin-right: 2%;
+    
+  }
+  .kuvapidike {
+    display: grid;
+  }
+ 
+}
+
+
+ /* kuvavalikonkuville */ 
+.kuva { 
+  height: 200px; 
+  width: auto; 
+ position: relative;
+} 
+
+
+
+/* Sisällön keskitystä varten luotu pidike */ 
+.pidike {
+  position:relative;
+  text-align: center;
+}
+/* Kaupan tuotteille kortti missä hinta ja nappi mikä paljastaa lisää tietoa tuotteesta("piiloteksti"). */ 
+.kortti {
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2);
+  background-color: #A6F4BE;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  border-radius: 25px;
+
+}
+
+.hinta {
+  color: grey;
+  font-size: 22px;
+}
+
+.kortti button {
+  border-width: 5px;
+  border-color: #E8F3F9;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #9DFE98;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 25px;
+}
+.piiloteksti{
+  display: none;
+}
+.kortti button:hover {
+  opacity: 0.7;
+}
+
+/* piilotekstin näyttäminen kun napin päällä pidetään hiirtä.*/ 
+.kortti button:hover + .piiloteksti {
+  display: block;
+  color: red;
+}
+
+
+.logo{
+  max-width: 100px; 
+  min-width: 80px;
+}
+
+.footer {
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  background-color: #9DFE98;
+  color: black;
+  text-align: center;
+}
