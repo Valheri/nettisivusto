@@ -22,13 +22,13 @@ body {
   float: left;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 24px 16px;
   text-decoration: none;
   font-size: 32px;
   margin: 4px 2px;
     
 }
-/* navigointipalkin a elementtien hiireen reaktiot. */
+/* navigointipalkin a elementtien reaktiot hiireen. */
 .navigation-bar a:hover {
   background-color: #A6F4BE;
   color: whitesmoke;
@@ -37,45 +37,34 @@ body {
   background-color: #A6F4BE;
   color: whitesmoke;
 }
+/* Tilaa napin asetuksia. */
+.tilaanappi {
+  background-color: #A6F4BE; 
+  border-width: 10px;
+  color: black;
+  border-color: #FDF8F5;
+  font-family: 'cascadiaCodeFontti';
+  font-size: 32px;
+  cursor: pointer;
+  border-radius: 18px;
+}
+.tilaanappi:hover {
+  background-color: #9DFE98;
+  color: whitesmoke;
+  border-color:#E8F3F9
+}
+/* pidike kuvavalikon kuville*/
 .kuvapidike {
-
-  display: inline-flexbox;
   justify-content: space-around;
   align-items: center;
- 
 }
 
-/* Näytön ollessa max 600px leveä valikon levennys ja asioiden keskittäminen*/
-@media screen and (max-width: 600px) {
-  .navigation-bar a {
-    padding: 0%;
-    width: 100%;
-    
-  }
-
-  .navigation-bar ul {
-    padding-right: 10%;
-  }
-
-  .logo{
-    margin-right: 2%;
-    
-  }
-  .kuvapidike {
-    display: grid;
-  }
- 
-}
-
-
- /* kuvavalikonkuville */ 
+ /* asetukset kuvavalikon kuville */ 
 .kuva { 
   height: 200px; 
   width: auto; 
- position: relative;
+  position: relative;
 } 
-
-
 
 /* Sisällön keskitystä varten luotu pidike */ 
 .pidike {
@@ -111,9 +100,11 @@ body {
   font-size: 18px;
   border-radius: 25px;
 }
+
 .piiloteksti{
   display: none;
 }
+
 .kortti button:hover {
   opacity: 0.7;
 }
@@ -126,8 +117,8 @@ body {
 
 
 .logo{
-  max-width: 100px; 
-  min-width: 80px;
+  width: 100px; 
+  border-radius: 66px;
 }
 
 .footer {
@@ -141,3 +132,49 @@ body {
   text-align: center;
 }
 
+.footer ul {
+  text-align: left;
+  list-style: circle;
+  list-style-position: inside;
+}
+
+/* sijoitus Näytön ollessa eri kokoinen.*/
+@media (max-width: 600px) {
+  .navigation-bar a {
+    padding: 0%;
+    width: 100%;
+  }
+  .navigation-bar ul {
+    padding-right: 10%;
+  }
+  .kuvapidike {
+    display: grid;
+  }
+  .logo{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+ 
+}
+@media screen and (min-width: 600px) {
+
+  .kuvapidike {
+    display: grid;
+  }
+  .logo{
+    margin-top: -20px;
+    margin-bottom: -30px;
+  }
+  
+}
+
+@media screen and (min-width: 1200px) {
+
+  .kuvapidike {
+    display: flex;
+  }
+  .navigation-bar a {
+    padding: 24px 16px;
+    width: auto;
+  }
+}
