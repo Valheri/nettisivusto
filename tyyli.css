@@ -8,9 +8,12 @@ body {
   margin: 0;
   font-family: 'cascadiaCodeFontti';
   background-color: #E8F3F9;
-  
 }
-
+/* Valittu sivu päävalikosta*/
+#valinta{
+  background-color: #3ff435;
+  color: darkslategray;
+}
 /* Navigointipalkin asetuksia*/
 .navigation-bar{
   overflow: hidden;
@@ -147,7 +150,7 @@ body {
 }
 
 /* ylä- ja kuvavalikon sijoitus Näytön ollessa eri kokoinen.*/
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .navigation-bar a {
     padding: 0%;
     width: 100%;
@@ -165,9 +168,10 @@ body {
   .etusivunlogo{
     width: 50%;
   }
+
  
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
 
   .kuvapidike {
     display: grid;
@@ -178,6 +182,9 @@ body {
   }
   .etusivunlogo{
     width: 35%;
+  }
+  #valinta{
+    border-radius: 15px;
   }
 }
 
